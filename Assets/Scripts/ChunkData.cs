@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.Experimental.AI;
-
 public class ChunkData 
 {
     public BlockType[] blocks;
