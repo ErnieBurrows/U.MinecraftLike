@@ -32,10 +32,10 @@ public static class BlockHelper
                     {
                         meshData.waterMesh = GetFaceDataIn(direction, chunk, x, y, z, meshData.waterMesh, blockType);
                     }
-                    else
-                    {
-                        meshData = GetFaceDataIn(direction, chunk, x, y, z, meshData, blockType);
-                    }
+                }
+                else
+                {
+                    meshData = GetFaceDataIn(direction, chunk, x, y, z, meshData, blockType);
                 }
             }
         }

@@ -152,7 +152,7 @@ MonoBehaviour:
   chunkSize: 16
   chunkHeight: 100
   waterThreshold: 39
-  noiseScale: 0.03
+  noiseScale: 0.01
   chunkPrefab: {fileID: 2979490914735776211, guid: 4b91be03c394e934c87b7986897bc740, type: 3}
 --- !u!4 &124669621
 Transform:

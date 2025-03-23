@@ -58,7 +58,7 @@ public static class Chunk
             return chunkData.blocks[index];
         }
 
-        return chunkData.worldReference.GetBlockFromWorldCoordinates(chunkData, chunkData.worldPosition.x + x, chunkData.worldPosition.y + y, chunkData.worldPosition.z + z);
+        return chunkData.worldReference.GetBlockFromChunkCoordinates(chunkData, chunkData.worldPosition.x + x, chunkData.worldPosition.y + y, chunkData.worldPosition.z + z);
     }
 
     public static BlockType GetBlockFromChunkCoordinates(ChunkData chunkData, Vector3Int chunkCoordinates)
@@ -75,7 +75,7 @@ public static class Chunk
     private static Vector3Int GetPositionFromIndex(ChunkData chunkData, int index)
     {
         int x = index % chunkData.chunkSize;
-        int y = (index / chunkData.chunkSize) % chunkData.chunkHeight;
+        int y = index / chunkData.chunkSize % chunkData.chunkHeight;
         int z = index / (chunkData.chunkSize * chunkData.chunkHeight);
         return new Vector3Int(x, y, z);
     }
@@ -85,7 +85,7 @@ public static class Chunk
     /// </summary>
     private static bool InRange(ChunkData chunkData, int axisCoordinate)
     {
-        if(axisCoordinate < 0 || axisCoordinate >= chunkData.blocks.Length)
+        if(axisCoordinate < 0 || axisCoordinate >= chunkData.chunkSize)
         {
             return false;
         }

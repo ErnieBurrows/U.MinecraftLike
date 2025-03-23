@@ -45,7 +45,7 @@ public class World : MonoBehaviour
         }
     }
 
-    public BlockType GetBlockFromWorldCoordinates(ChunkData chunkData, int x, int y, int z)
+    internal BlockType GetBlockFromChunkCoordinates(ChunkData chunkData, int x, int y, int z)
     {
         Vector3Int position = Chunk.ChunkPositionFromBlockCoords(this, x, y, z);
         ChunkData containerChunk = null;
