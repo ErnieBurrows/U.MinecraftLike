@@ -1061,8 +1061,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551fb58b0ebb647468ecb1c3138ef423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterThreshold: 38
-  noiseScale: 0.01
+  biomeNoiseSettings: {fileID: 11400000, guid: d1a624afab0cec54f8f2f6e920470d63, type: 2}
+  waterThreshold: 8
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
